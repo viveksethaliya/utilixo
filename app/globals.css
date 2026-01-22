@@ -456,6 +456,12 @@ body {
   color: #475569;
 }
 
+@media (min-width: 1400px) {
+  .sidebar-ad {
+    display: block !important;
+  }
+}
+
 @media (max-width: 768px) {
   .tools-grid {
     grid-template-columns: 1fr;

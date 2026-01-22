@@ -3,7 +3,6 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/_next/'],
     },
     sitemap: 'https://utilixo-nextjs.vercel.app/sitemap.xml',
   }

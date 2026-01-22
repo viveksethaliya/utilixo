@@ -100,54 +100,66 @@ export default function Home() {
           </p>
         </div>
 
-      <div className="tools-grid">
-        {tools.map((tool) => (
-          <Link href={tool.href} key={tool.href} className="tool-card">
-            <div className="tool-icon">{tool.icon}</div>
-            <h2>{tool.title}</h2>
-            <p>{tool.description}</p>
-            {tool.tag && <span className="tool-tag">{tool.tag}</span>}
-          </Link>
-        ))}
-      </div>
+        <div className="tools-grid">
+          {tools.map((tool) => (
+            <Link href={tool.href} key={tool.href} className="tool-card">
+              <div className="tool-icon">{tool.icon}</div>
+              <h2>{tool.title}</h2>
+              <p>{tool.description}</p>
+              {tool.tag && <span className="tool-tag">{tool.tag}</span>}
+            </Link>
+          ))}
+        </div>
 
-      {/* Ad Banner */}
-      <div style={{ margin: '40px 0', textAlign: 'center' }}>
-        <AdBanner dataAdSlot="1234567890" />
-      </div>
-
-      <div className="features-section">
-        <h2>Why Use Our Tools?</h2>
-        <div className="features-grid">
-          <div className="feature-item">
-            <h3>🔒 100% Private</h3>
-            <p>All processing happens in your browser. Your files never leave your device.</p>
-          </div>
-          <div className="feature-item">
-            <h3>⚡ Lightning Fast</h3>
-            <p>Instant results with no server delays or waiting times.</p>
-          </div>
-          <div className="feature-item">
-            <h3>💯 Always Free</h3>
-            <p>No registration, no subscriptions, no hidden costs. Use unlimited.</p>
-          </div>
-          <div className="feature-item">
-            <h3>📱 Works Everywhere</h3>
-            <p>Desktop, tablet, or mobile - all tools are fully responsive.</p>
+        <div className="features-section">
+          <h2>Why Use Our Tools?</h2>
+          <div className="features-grid">
+            <div className="feature-item">
+              <h3>🔒 100% Private</h3>
+              <p>All processing happens in your browser. Your files never leave your device.</p>
+            </div>
+            <div className="feature-item">
+              <h3>⚡ Lightning Fast</h3>
+              <p>Instant results with no server delays or waiting times.</p>
+            </div>
+            <div className="feature-item">
+              <h3>💯 Always Free</h3>
+              <p>No registration, no subscriptions, no hidden costs. Use unlimited.</p>
+            </div>
+            <div className="feature-item">
+              <h3>📱 Works Everywhere</h3>
+              <p>Desktop, tablet, or mobile - all tools are fully responsive.</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div style={{ textAlign: 'center', marginTop: '80px', padding: '40px', background: '#f8fafc', borderRadius: '12px' }}>
-        <h2 style={{ marginBottom: '20px' }}>Need IT Help?</h2>
-        <p style={{ color: '#64748b', marginBottom: '30px', fontSize: '1.1rem' }}>
-          Check our Fix-It section for step-by-step solutions to common computer problems
-        </p>
-        <Link href="/fixit" className="btn-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
-          Browse Fix-It Guides →
-        </Link>
+        <div style={{ textAlign: 'center', marginTop: '80px', padding: '40px', background: '#f8fafc', borderRadius: '12px' }}>
+          <h2 style={{ marginBottom: '20px' }}>Need IT Help?</h2>
+          <p style={{ color: '#64748b', marginBottom: '30px', fontSize: '1.1rem' }}>
+            Check our Fix-It section for step-by-step solutions to common computer problems
+          </p>
+          <Link href="/fixit" className="btn-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
+            Browse Fix-It Guides →
+          </Link>
+        </div>
+      </main>
+      
+      {/* Fixed Sidebar Ad - Doesn't affect layout */}
+      <div style={{
+        position: 'fixed',
+        right: '20px',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        zIndex: 1000
+      }}>
+        <div style={{ display: 'none' }} className="sidebar-ad">
+          <AdBanner 
+            dataAdSlot="1234567898" 
+            dataAdFormat="vertical"
+            style={{ display: 'block', width: '160px', height: '600px' }}
+          />
+        </div>
       </div>
-    </main>
     </>
   )
 }

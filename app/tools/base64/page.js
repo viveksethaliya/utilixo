@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import AdBanner from '@/components/AdBanner'
 
 export default function Base64Tool() {
   const [mode, setMode] = useState('encode')
@@ -34,6 +35,11 @@ export default function Base64Tool() {
           <textarea value={textInput} onChange={(e) => setTextInput(e.target.value)} placeholder="Enter text here..." />
         </div>
         <button className="btn-primary" onClick={processText}>{mode === 'encode' ? 'Encode' : 'Decode'}</button>
+        
+        <div style={{ margin: '30px 0', textAlign: 'center' }}>
+          <AdBanner dataAdSlot="1234567894" />
+        </div>
+        
         <div className="text-area-group">
           <label>{mode === 'encode' ? 'Base64 Output' : 'Decoded Text'}</label>
           <textarea value={textOutput} readOnly placeholder="Result will appear here..." />

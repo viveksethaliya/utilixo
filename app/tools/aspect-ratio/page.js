@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import AdBanner from '@/components/AdBanner'
 
 export default function AspectRatio() {
   const [currentWidth, setCurrentWidth] = useState('')
@@ -48,6 +49,10 @@ export default function AspectRatio() {
             <label>Height (px)</label>
             <input type="number" value={currentHeight} onChange={(e) => { setCurrentHeight(e.target.value); calculateAspectRatio() }} placeholder="1080" />
           </div>
+        </div>
+
+        <div style={{ margin: '30px 0', textAlign: 'center' }}>
+          <AdBanner dataAdSlot="1234567896" />
         </div>
 
         <h3>Calculate New Dimensions</h3>

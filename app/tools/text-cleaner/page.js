@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import AdBanner from '@/components/AdBanner'
 
 export default function TextCleaner() {
   const [inputText, setInputText] = useState('')
@@ -37,6 +38,10 @@ export default function TextCleaner() {
             <button className="btn-option" onClick={toUpperCase}>To UPPERCASE</button>
             <button className="btn-option" onClick={toTitleCase}>To Title Case</button>
           </div>
+        </div>
+        
+        <div style={{ margin: '30px 0', textAlign: 'center' }}>
+          <AdBanner dataAdSlot="1234567892" />
         </div>
         <div className="text-area-group">
           <label>Cleaned Text</label>

@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { extensions, getExtensionInfo } from './extensions'
+import AdBanner from '@/components/AdBanner'
 
 export default function FileExtension() {
   const [extensionInput, setExtensionInput] = useState('')
@@ -33,6 +34,10 @@ export default function FileExtension() {
             />
             <button className="btn-primary" onClick={identifyExtension}>Identify</button>
           </div>
+        </div>
+
+        <div style={{ margin: '30px 0', textAlign: 'center' }}>
+          <AdBanner dataAdSlot="1234567895" />
         </div>
 
         {info && (

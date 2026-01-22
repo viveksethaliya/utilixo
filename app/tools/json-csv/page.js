@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import AdBanner from '@/components/AdBanner'
 
 export default function JsonCsv() {
   const [jsonInput, setJsonInput] = useState('')
@@ -56,6 +57,11 @@ export default function JsonCsv() {
           <textarea value={jsonInput} onChange={(e) => setJsonInput(e.target.value)} placeholder='[{"name":"John","age":30}]' />
         </div>
         <button className="btn-primary" onClick={convertJSON}>Convert to CSV</button>
+        
+        <div style={{ margin: '30px 0', textAlign: 'center' }}>
+          <AdBanner dataAdSlot="1234567893" />
+        </div>
+        
         <div className="text-area-group">
           <label>CSV Output</label>
           <textarea value={csvOutput} readOnly placeholder="CSV output will appear here..." />

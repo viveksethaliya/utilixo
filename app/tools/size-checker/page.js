@@ -1,6 +1,7 @@
 
 'use client'
 import { useState, useRef } from 'react'
+import AdBanner from '@/components/AdBanner'
 
 export default function SizeChecker() {
   const [results, setResults] = useState(null)
@@ -63,6 +64,11 @@ export default function SizeChecker() {
           <input ref={fileInputRef} type="file" accept="image/*" onChange={handleImageUpload} hidden />
           <button className="btn-primary">Select Image</button>
         </div>
+        
+        <div style={{ margin: '30px 0', textAlign: 'center' }}>
+          <AdBanner dataAdSlot="1234567897" />
+        </div>
+        
         {results && (
           <div className="result-section">
             <div className="result-grid">
