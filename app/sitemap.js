@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://your-project-name.vercel.app'
+  const baseUrl = 'https://utilixo-nextjs.vercel.app'
   
   const tools = [
     'dpi-checker',

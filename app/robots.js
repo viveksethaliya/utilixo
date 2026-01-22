@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/api/', '/_next/'],
     },
-    sitemap: 'https://your-project-name.vercel.app/sitemap.xml',
+    sitemap: 'https://utilixo-nextjs.vercel.app/sitemap.xml',
   }
 }

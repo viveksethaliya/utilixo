@@ -2,7 +2,7 @@
 'use client'
 import { useState, useRef } from 'react'
 
-// Remove metadata export from client component
+// SEO handled by root layout
 
 function extractDPI(arrayBuffer, mimeType) {
   const view = new DataView(arrayBuffer)
