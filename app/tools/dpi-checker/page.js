@@ -1,6 +1,7 @@
 
 'use client'
 import { useState, useRef } from 'react'
+import AdBanner from '@/components/AdBanner'
 
 // SEO handled by root layout
 
@@ -129,6 +130,11 @@ export default function DPIChecker() {
           <p>Supports JPG, PNG, GIF, BMP, WebP</p>
           <input ref={fileInputRef} type="file" accept="image/*" onChange={handleImageUpload} hidden />
           <button className="btn-primary">Select Image</button>
+        </div>
+
+        {/* Ad Banner */}
+        <div style={{ margin: '30px 0', textAlign: 'center' }}>
+          <AdBanner dataAdSlot="1234567891" />
         </div>
 
         {results && (

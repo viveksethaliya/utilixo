@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import StructuredData from '@/components/StructuredData'
+import AdBanner from '@/components/AdBanner'
 
 export const metadata = {
   title: 'Free Online Tools & IT Solutions - Utilixo',
@@ -108,6 +109,11 @@ export default function Home() {
             {tool.tag && <span className="tool-tag">{tool.tag}</span>}
           </Link>
         ))}
+      </div>
+
+      {/* Ad Banner */}
+      <div style={{ margin: '40px 0', textAlign: 'center' }}>
+        <AdBanner dataAdSlot="1234567890" />
       </div>
 
       <div className="features-section">
