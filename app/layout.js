@@ -25,7 +25,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://utilixo.com',
+    url: 'https://your-project-name.vercel.app',
     siteName: 'Utilixo',
     title: 'Utilixo - Free Online Tools & IT Solutions',
     description: 'Free online tools and IT problem solutions. All tools work in your browser - 100% private.',
