@@ -9,12 +9,20 @@ body {
   line-height: 1.6;
   color: #1e293b;
   background: #ffffff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
 }
 
 /* Tool Cards */
@@ -465,6 +473,7 @@ body {
 @media (max-width: 768px) {
   .tools-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .result-grid {
@@ -473,10 +482,44 @@ body {
   
   .dimension-inputs {
     flex-direction: column;
+    gap: 15px;
   }
   
   .multiply-sign {
     transform: rotate(90deg);
+    align-self: center;
+  }
+  
+  .upload-box {
+    padding: 40px 20px;
+  }
+  
+  .upload-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+  
+  .options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  .intro-text {
+    font-size: 1rem;
   }
 }
 

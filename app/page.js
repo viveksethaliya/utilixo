@@ -93,9 +93,9 @@ export default function Home() {
     <>
       <StructuredData />
       <main className="container">
-        <div style={{ textAlign: 'center', padding: '60px 20px' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '20px' }}>Utilixo</h1>
-          <p style={{ fontSize: '1.2rem', color: '#64748b', maxWidth: '600px', margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', padding: '40px 20px' }}>
+          <h1 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Utilixo</h1>
+          <p style={{ fontSize: '1.1rem', color: '#64748b', maxWidth: '600px', margin: '0 auto' }}>
             Fast, secure, and privacy-focused utilities for everyday tasks. All tools work directly in your browser - no uploads required.
           </p>
         </div>

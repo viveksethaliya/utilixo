@@ -9,7 +9,7 @@ export default function SearchClient({ articles }) {
   // Efficient search with memoization
   const filteredArticles = useMemo(() => {
     if (!searchQuery.trim()) {
-      return articles
+      return [] // Return empty array when no search query
     }
 
     const query = searchQuery.toLowerCase().trim()
@@ -137,7 +137,7 @@ export default function SearchClient({ articles }) {
             </span>
           ) : (
             <span>
-              <strong>{articles.length}</strong> solutions available
+              Enter a search term to find solutions
             </span>
           )}
         </div>

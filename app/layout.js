@@ -1,6 +1,5 @@
 import './globals.css'
 import Link from 'next/link'
-import Script from 'next/script'
 
 export const metadata = {
   title: {
@@ -44,21 +43,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3641452637434810"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-      </head>
       <body>
         <header style={{ background: '#fff', borderBottom: '1px solid #e2e8f0', position: 'sticky', top: 0, zIndex: 1000 }}>
-          <nav style={{ maxWidth: '1200px', margin: '0 auto', padding: '1rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <nav style={{ maxWidth: '1200px', margin: '0 auto', padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
             <Link href="/" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#2563eb', textDecoration: 'none' }}>
               Utilixo
             </Link>
-            <div style={{ display: 'flex', gap: '2rem' }}>
+            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
               <Link href="/" style={{ textDecoration: 'none', color: '#334155', fontWeight: 500 }}>Tools</Link>
               <Link href="/fixit" style={{ textDecoration: 'none', color: '#334155', fontWeight: 500 }}>Fix-It</Link>
               <Link href="/privacy" style={{ textDecoration: 'none', color: '#334155', fontWeight: 500 }}>Privacy</Link>
@@ -67,10 +58,10 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         {children}
-        <footer style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0', marginTop: '4rem', padding: '2rem' }}>
+        <footer style={{ background: '#f8fafc', borderTop: '1px solid #e2e8f0', marginTop: '4rem', padding: '2rem 1rem' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center', color: '#64748b' }}>
             <p>&copy; 2025 Utilixo. All rights reserved.</p>
-            <div style={{ marginTop: '1rem', display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
+            <div style={{ marginTop: '1rem', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link href="/privacy" style={{ color: '#2563eb', textDecoration: 'none' }}>Privacy</Link>
               <Link href="/contact" style={{ color: '#2563eb', textDecoration: 'none' }}>Contact</Link>
             </div>
