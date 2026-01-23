@@ -1,7 +1,7 @@
 ---
 title: "Improve PC Performance – Practical & Safe Methods"
 description: "Speed up your PC safely using built-in system settings and smart hardware choices without risky third-party tools."
-tags: ["pc performance", "windows speed up", "high performance power plan", "ssd upgrade", "optimize pc"]
+tags: ["pc performance", "windows speed up", "high performance power plan", "ssd upgrade", "optimize pc", "Slow Performance"]
 date: "2026-01-23"
 ---
 

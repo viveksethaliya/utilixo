@@ -1,8 +1,8 @@
 'use client'
 
 export default function ArticleStyles() {
-    return (
-        <style jsx global>{`
+  return (
+    <style jsx global>{`
       .prose h2 {
         font-size: 1.8rem;
         margin: 50px 0 20px;
@@ -65,6 +65,9 @@ export default function ArticleStyles() {
         border-top: 2px solid #e2e8f0;
         margin: 40px 0;
       }
+      .prose img {
+        border-radius: 0px;
+      }
     `}</style>
-    )
+  )
 }

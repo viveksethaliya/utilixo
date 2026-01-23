@@ -31,12 +31,12 @@ export default function SearchClient({ articles }) {
             score += 10
             if (titleLower.startsWith(term)) score += 5
           }
-          
+
           // Tag matches (medium priority)
           if (tagsLower.includes(term)) {
             score += 5
           }
-          
+
           // Description matches (lower priority)
           if (descLower.includes(term)) {
             score += 2
@@ -64,20 +64,20 @@ export default function SearchClient({ articles }) {
       {/* Search Box */}
       <div style={{ maxWidth: '800px', margin: '40px auto' }}>
         <div style={{ position: 'relative' }}>
-          <svg 
-            style={{ 
-              position: 'absolute', 
-              left: '20px', 
-              top: '50%', 
-              transform: 'translateY(-50%)', 
-              width: '24px', 
-              height: '24px', 
+          <svg
+            style={{
+              position: 'absolute',
+              left: '20px',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              width: '24px',
+              height: '24px',
               color: '#94a3b8',
               pointerEvents: 'none'
             }}
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24" 
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
             stroke="currentColor"
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -145,8 +145,8 @@ export default function SearchClient({ articles }) {
 
       {/* No Results */}
       {searchQuery && filteredArticles.length === 0 && (
-        <div style={{ 
-          textAlign: 'center', 
+        <div style={{
+          textAlign: 'center',
           padding: '60px',
           maxWidth: '600px',
           margin: '0 auto'
@@ -158,17 +158,17 @@ export default function SearchClient({ articles }) {
           <p style={{ color: '#64748b', marginBottom: '20px' }}>
             Try different keywords or check your spelling
           </p>
-          <p style={{ 
-            color: '#94a3b8', 
-            fontSize: '0.9rem', 
-            background: '#f8fafc', 
-            padding: '15px', 
+          <p style={{
+            color: '#94a3b8',
+            fontSize: '0.9rem',
+            background: '#f8fafc',
+            padding: '15px',
             borderRadius: '8px',
             marginTop: '20px'
           }}>
             Searched for: <strong>"{searchQuery}"</strong>
           </p>
-          <button 
+          <button
             onClick={() => setSearchQuery('')}
             className="btn-primary"
             style={{ marginTop: '20px' }}
@@ -180,10 +180,10 @@ export default function SearchClient({ articles }) {
 
       {/* Articles Grid */}
       {filteredArticles.length > 0 && (
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', 
-          gap: '25px', 
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
+          gap: '25px',
           margin: '40px 0',
           maxWidth: '1200px',
           marginLeft: 'auto',
@@ -220,13 +220,13 @@ export default function SearchClient({ articles }) {
                 }}
               >
                 {/* Category Badge */}
-                <div style={{ 
-                  display: 'inline-block', 
+                <div style={{
+                  display: 'inline-block',
                   background: getCategoryColor(article.category).bg,
                   color: getCategoryColor(article.category).text,
-                  padding: '4px 12px', 
-                  borderRadius: '12px', 
-                  fontSize: '0.8rem', 
+                  padding: '4px 12px',
+                  borderRadius: '12px',
+                  fontSize: '0.8rem',
                   fontWeight: '600',
                   marginBottom: '15px',
                   alignSelf: 'flex-start',
@@ -236,10 +236,10 @@ export default function SearchClient({ articles }) {
                 </div>
 
                 {/* Title */}
-                <h2 style={{ 
-                  fontSize: '1.3rem', 
-                  color: '#1e293b', 
-                  margin: '0 0 12px 0', 
+                <h2 style={{
+                  fontSize: '1.3rem',
+                  color: '#1e293b',
+                  margin: '0 0 12px 0',
                   lineHeight: '1.4',
                   flex: '0 0 auto'
                 }}>
@@ -247,9 +247,9 @@ export default function SearchClient({ articles }) {
                 </h2>
 
                 {/* Description */}
-                <p style={{ 
-                  color: '#64748b', 
-                  fontSize: '0.95rem', 
+                <p style={{
+                  color: '#64748b',
+                  fontSize: '0.95rem',
                   marginBottom: '20px',
                   lineHeight: '1.6',
                   flex: '1 1 auto'
@@ -259,14 +259,14 @@ export default function SearchClient({ articles }) {
 
                 {/* Tags */}
                 {article.tags && article.tags.length > 0 && (
-                  <div style={{ 
-                    display: 'flex', 
-                    flexWrap: 'wrap', 
+                  <div style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
                     gap: '8px',
                     marginBottom: '20px'
                   }}>
                     {article.tags.slice(0, 4).map((tag, index) => (
-                      <span 
+                      <span
                         key={index}
                         style={{
                           background: '#f1f5f9',
@@ -281,9 +281,9 @@ export default function SearchClient({ articles }) {
                       </span>
                     ))}
                     {article.tags.length > 4 && (
-                      <span style={{ 
-                        color: '#94a3b8', 
-                        fontSize: '0.8rem', 
+                      <span style={{
+                        color: '#94a3b8',
+                        fontSize: '0.8rem',
                         padding: '4px 0',
                         alignSelf: 'center'
                       }}>
@@ -294,11 +294,11 @@ export default function SearchClient({ articles }) {
                 )}
 
                 {/* Read Link */}
-                <div style={{ 
-                  display: 'flex', 
+                <div style={{
+                  display: 'flex',
                   alignItems: 'center',
                   gap: '8px',
-                  paddingTop: '15px', 
+                  paddingTop: '15px',
                   borderTop: '1px solid #e2e8f0',
                   color: '#2563eb',
                   fontSize: '0.9rem',
@@ -318,9 +318,9 @@ export default function SearchClient({ articles }) {
 
       {/* Info Section */}
       {!searchQuery && (
-        <div style={{ 
-          marginTop: '80px', 
-          maxWidth: '800px', 
+        <div style={{
+          marginTop: '80px',
+          maxWidth: '800px',
           margin: '80px auto 0',
           background: '#f8fafc',
           padding: '40px',
@@ -384,7 +384,8 @@ function getCategoryColor(category) {
     network: { bg: '#fef3c7', text: '#92400e' },
     hardware: { bg: '#e0e7ff', text: '#4338ca' },
     mac: { bg: '#f3e8ff', text: '#6b21a8' },
-    software: { bg: '#dcfce7', text: '#166534' }
+    software: { bg: '#dcfce7', text: '#166534' },
+    System: { bg: '#f1f5f9', text: '#475569' }
   }
   return colors[category] || { bg: '#f1f5f9', text: '#475569' }
 }
