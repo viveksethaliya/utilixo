@@ -14,7 +14,7 @@ export default function AspectRatio() {
   useEffect(() => {
     const w = parseFloat(currentWidth)
     const h = parseFloat(currentHeight)
-    if (w > 0 && h > 0) {
+    if (w > 0 && h > 0 && isFinite(w) && isFinite(h)) {
       setAspectRatio(w / h)
     } else {
       setAspectRatio(0)
@@ -78,13 +78,16 @@ export default function AspectRatio() {
   }
 
   const getRatioDisplay = () => {
-    if (aspectRatio > 0) {
+    if (aspectRatio > 0 && isFinite(aspectRatio)) {
       const w = parseFloat(currentWidth)
       const h = parseFloat(currentHeight)
+      
+      if (!w || !h || !isFinite(w) || !isFinite(h)) return 'Enter dimensions'
       
       const gcd = (a, b) => {
         a = Math.abs(Math.round(a))
         b = Math.abs(Math.round(b))
+        if (a === 0 || b === 0) return 1
         while (b !== 0) {
           const temp = b
           b = a % b
